@@ -1,0 +1,379 @@
+</<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather or Not</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="weather.css" rel="stylesheet">
+    <script src="weather.js"></script>
+    <link href="css/weather-icons.min.css" rel="stylesheet">
+    <link href="css/weather-icons-wind.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="./images/logo-wather.png" id="brand"/></a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto margin-left">
+          <li class="nav-item" id="welcome-nav">
+            <a class="nav-link" onclick="scrollAnim(0)">Home</a>
+          </li>
+          <li class="nav-item" id="forecast-nav">
+            <a class="nav-link" onclick="scrollAnim(290)">Forecast</a>
+          </li>
+          <li class="nav-item" id="seismic-nav" >
+            <a class="nav-link" onclick="scrollAnim(1500)">Seismic</a>
+          </li>
+          <li class="nav-item" id="volcanic-nav">
+            <a class="nav-link" onclick="scrollAnim(2600)">Volcanic</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </nav>
+    <!-- Welcome -->
+    <div class="container-fluid" id="welcome" >
+      <div class="row text-center">
+        <div class="col-12" id="description">
+          <h1 class="display-3">Weather or Not</h1>
+          <hr/>
+          <p class="lead" id="">We bring you the most accurate weather and
+            geological forecasts. Our goal is to provide exact informaion for
+            our useres, beacuse we know that the weather is a key factor
+            in everyday life.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forecast -->
+    <div class="container-fluid top" id="forecast">
+      <div class="row">
+          <div class="col-12 text-center">
+            <h1 class="display-4">Weather Forecast</h1>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-8">
+            <div class="row">
+                    <div class="col-sm-6 col-lg-3">
+                      <div class="card card-margin">
+              				 <img class="card-img-top" src="./images/coludy.jpg"/>
+              				 <div class="card-body">
+                         <h4 class="card-title">Monday</h4>
+                         <div id="monday-content">
+                          <div class="card-content" >
+                           <h2 class="degrees">10-14°</h2>
+                					 <p>This Monday we'll have some cloudy weather with a slight chance of rain.</p>
+                          </div>
+                            <button type="button" class="btn btn-primary" id="monday-info">See Details</button>
+                          </div>
+                          <div class="details" id="monday-details">
+                         <div class="card-content">
+                           <p class=""><i class="wi wi-sunrise"></i> <span class="sunrise">6:38 am </span><br>
+                             <i class="wi wi-sunset"></i> <span class="sunset">6:38 pm </span><br>
+                             <i class="wi wi-strong-wind"></i> <span class="wind">12km/h </span><br>
+                             <i class="wi wi-raindrop"></i> <span class="humidity">3%</span>
+                           </p>
+                         </div>
+                        <button type="button" class="btn btn-primary" id="monday-back">Back</button>
+                         </div>
+              				 </div>
+            			     </div>
+                    </div><!--monday-->
+                    <div class="col-sm-6 col-lg-3">
+                      <div class="card card-margin">
+              				 <img class="card-img-top" src="./images/rainy.jpg"/>
+              				 <div class="card-body">
+                         <h4 class="card-title">Tuesday</h4>
+                         <div id="tuesday-content">
+                          <div class="card-content" >
+                           <h2 class="degrees">10-14°</h2>
+                           <p>This Monday we'll have some cloudy weather with a slight chance of rain.</p>
+                          </div>
+                            <button type="button" class="btn btn-primary" id="tuesday-info">See Details</button>
+                          </div>
+                          <div class="details" id="tuesday-details">
+                         <div class="card-content">
+                          <p class=""><i class="wi wi-sunrise"></i> <span class="sunrise">6:38 am </span><br>
+                            <i class="wi wi-sunset"></i> <span class="sunset">6:38 pm </span><br>
+                            <i class="wi wi-strong-wind"></i> <span class="wind">12km/h </span><br>
+                            <i class="wi wi-raindrop"></i> <span class="humidity">3%</span>
+                          </p>
+                         </div>
+                        <button type="button" class="btn btn-primary" id="tuesday-back">Back</button>
+                         </div>
+              				 </div>
+            			     </div>
+                    </div><!--tuesday-->
+                    <div class="col-sm-6 col-lg-3">
+                      <div class="card card-margin">
+              				 <img class="card-img-top" src="./images/lightning.jpg"/>
+              				 <div class="card-body">
+                         <h4 class="card-title">Wednesday</h4>
+                         <div id="wednesday-content">
+                          <div class="card-content" >
+                           <h2 class="degrees">10-14°</h2>
+                           <p>This Monday we'll have some cloudy weather with a slight chance of rain.</p>
+                          </div>
+                            <button type="button" class="btn btn-primary" id="wednesday-info">See Details</button>
+                          </div>
+                          <div class="details" id="wednesday-details">
+                         <div class="card-content">
+                          <p class=""><i class="wi wi-sunrise"></i> <span class="sunrise">6:38 am </span><br>
+                            <i class="wi wi-sunset"></i> <span class="sunset">6:38 pm </span><br>
+                            <i class="wi wi-strong-wind"></i> <span class="wind">12km/h </span><br>
+                            <i class="wi wi-raindrop"></i> <span class="humidity">3%</span>
+                          </p>
+                         </div>
+                        <button type="button" class="btn btn-primary" id="wednesday-back">Back</button>
+                         </div>
+              				 </div>
+            			     </div>
+                    </div><!--wednesday-->
+                    <div class="col-sm-6 col-lg-3">
+                      <div class="card card-margin">
+              				 <img class="card-img-top" src="./images/rainy.jpg"/>
+              				 <div class="card-body">
+                          <h4 class="card-title">Thursday</h4>
+                          <div id="thursday-content">
+                           <div class="card-content" >
+                            <h2 class="degrees">10-14°</h2>
+                            <p>This Monday we'll have some cloudy weather with a slight chance of rain.</p>
+                           </div>
+                             <button type="button" class="btn btn-primary" id="thursday-info">See Details</button>
+                           </div>
+                           <div class="details" id="thursday-details">
+                          <div class="card-content">
+                            <p class=""><i class="wi wi-sunrise"></i> <span class="sunrise">6:38 am </span><br>
+                              <i class="wi wi-sunset"></i> <span class="sunset">6:38 pm </span><br>
+                              <i class="wi wi-strong-wind"></i> <span class="wind">12km/h </span><br>
+                              <i class="wi wi-raindrop"></i> <span class="humidity">3%</span>
+                            </p>
+                          </div>
+                         <button type="button" class="btn btn-primary" id="thursday-back">Back</button>
+                          </div>
+
+            			     </div>
+                    </div><!--thursday-->
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                      <div class="card card-margin">
+              				 <img class="card-img-top" src="./images/coludy.jpg"/>
+              				 <div class="card-body">
+                         <h4 class="card-title">Monday</h4>
+                         <div id="friday-content">
+                          <div class="card-content" >
+                           <h2 class="degrees">10-14°</h2>
+                           <p>This Monday we'll have some cloudy weather with a slight chance of rain.</p>
+                          </div>
+                            <button type="button" class="btn btn-primary" id="friday-info">See Details</button>
+                          </div>
+                          <div class="details" id="friday-details">
+                         <div class="card-content">
+                          <p class=""><i class="wi wi-sunrise"></i> <span class="sunrise">6:38 am </span><br>
+                            <i class="wi wi-sunset"></i> <span class="sunset">6:38 pm </span><br>
+                            <i class="wi wi-strong-wind"></i> <span class="wind">12km/h </span><br>
+                            <i class="wi wi-raindrop"></i> <span class="humidity">3%</span>
+                          </p>
+                         </div>
+                        <button type="button" class="btn btn-primary" id="friday-back">Back</button>
+                         </div>
+              				 </div>
+            			     </div>
+                    </div><!--friday-->
+                    <div class="col-sm-6 col-lg-3">
+                      <div class="card card-margin">
+              				 <img class="card-img-top" src="./images/kinda sunny.jpg"/>
+              				 <div class="card-body">
+                         <h4 class="card-title">Monday</h4>
+                         <div id="saturday-content">
+                          <div class="card-content" >
+                           <h2 class="degrees">10-14°</h2>
+                           <p>This Monday we'll have some cloudy weather with a slight chance of rain.</p>
+                          </div>
+                            <button type="button" class="btn btn-primary" id="saturday-info">See Details</button>
+                          </div>
+                          <div class="details" id="saturday-details">
+                         <div class="card-content">
+                          <p class=""><i class="wi wi-sunrise"></i> <span class="sunrise">6:38 am </span><br>
+                            <i class="wi wi-sunset"></i> <span class="sunset">6:38 pm </span><br>
+                            <i class="wi wi-strong-wind"></i> <span class="wind">12km/h </span><br>
+                            <i class="wi wi-raindrop"></i> <span class="humidity">3%</span>
+                          </p>
+                         </div>
+                        <button type="button" class="btn btn-primary" id="saturday-back">Back</button>
+                         </div>
+              				 </div>
+            			     </div>
+                    </div><!--saturday-->
+                    <div class="col-sm-6 col-lg-3">
+                      <div class="card card-margin">
+              				 <img class="card-img-top" src="./images/kinda sunny.jpg"/>
+              				 <div class="card-body">
+                         <h4 class="card-title">Monday</h4>
+                         <div id="sunday-content">
+                          <div class="card-content" >
+                           <h2 class="degrees">10-14°</h2>
+                           <p>This Monday we'll have some cloudy weather with a slight chance of rain.</p>
+                          </div>
+                            <button type="button" class="btn btn-primary" id="sunday-info">See Details</button>
+                          </div>
+                          <div class="details" id="sunday-details">
+                         <div class="card-content">
+                          <p class=""><i class="wi wi-sunrise"></i> <span class="sunrise">6:38 am </span><br>
+                            <i class="wi wi-sunset"></i> <span class="sunset">6:38 pm </span><br>
+                            <i class="wi wi-strong-wind"></i> <span class="wind">12km/h </span><br>
+                            <i class="wi wi-raindrop"></i> <span class="humidity">3%</span>
+                          </p>
+                         </div>
+                        <button type="button" class="btn btn-primary" id="sunday-back">Back</button>
+                         </div>
+              				 </div>
+            			     </div>
+                    </div><!--sunday-->
+                    <div class="col-sm-6 col-lg-3">
+                      <div class="card card-margin">
+              				 <img class="card-img-top" src="./images/coludy.jpg"/>
+              				 <div class="card-body">
+                         <h4 class="card-title">Monday</h4>
+                         <div id="monday1-content">
+                          <div class="card-content" >
+                           <h2 class="degrees">10-14°</h2>
+                           <p>This Monday we'll have some cloudy weather with a slight chance of rain.</p>
+                          </div>
+                            <button type="button" class="btn btn-primary" id="monday1-info">See Details</button>
+                          </div>
+                          <div class="details" id="monday1-details">
+                         <div class="card-content">
+                          <p class=""><i class="wi wi-sunrise"></i> <span class="sunrise">6:38 am </span><br>
+                            <i class="wi wi-sunset"></i> <span class="sunset">6:38 pm </span><br>
+                            <i class="wi wi-strong-wind"></i> <span class="wind">12km/h </span><br>
+                            <i class="wi wi-raindrop"></i> <span class="humidity">3%</span>
+                          </p>
+                         </div>
+                        <button type="button" class="btn btn-primary" id="monday1-back">Back</button>
+                         </div>
+              				 </div>
+            			     </div>
+                    </div><!--monday1-->
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-4 text-center">
+          <h3 calss="display-2">This Week</h3>
+          <hr class="my-hr"/>
+          <p id="this-week-p">This week's forecast shows drastic changes in the weather from day to day.
+          The first few days will be cloudy, mellow and relaxing overall
+          Then follows a violent strorm, snow can be expected and it is recomended to stay indoors.
+          If you must leave your home make sure to bring some water resistant clothing. On the contrary
+          the weekend will be warm and sunny. The weather will be perfect for the beach. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id .
+          </p>
+          <img src="./images/logo-wather.png"/>
+        </div>
+      </div>
+    </div>
+
+    <!--Jumbotron-->
+    <div class="container-fluid">
+      <div class="row jumbotron top">
+        <div class="col-sm-12 col-md-10">
+            <p class="lead">We get out data from weather stations all around the
+            world in order to preset you with accurate forecasts on a global
+            and local scale.However, we do not run adds so we depend on donations
+            from users like you to sustain our service.</p>
+        </div>
+        <div class="col-sm-12 col-md-2 ">
+          <button type="button" class="btn btn-primary">Donate Now</button>
+
+        </div>
+      </div>
+    </div>
+    <!-- Seismic forecast -->
+    <div id="seismic">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6">
+            <h1 class="display-4">Seismic Activity</h1>
+            <div>
+              <h4 >Nepal</h4>
+              <p>The Nepalese gouverment has announced a high risk of earthquakes
+              in the area surrounding the city of Dharan. The inhabitence area
+              currently being evacuated due to Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+            <img src="./images/nepal.png"/>
+            <p class="photo-desc">Photo of earthquake in Nepal from 2015 with an estimated 7.8 on
+            Richter scale</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Fixed-->
+    <figure>
+    	<div class="fixed-wrap">
+    		<div id="fixed">
+    		</div>
+    	</div>
+    </figure>
+    <!--volcanic-->
+    <div  id="volcanic">
+    <div class="container-fluid top">
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="./images/asosan.jpg"/>
+          <p class="photo-desc">Photo of Asosan volcano</p>
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-4">Volcanic Activity</h1>
+          <div>
+            <h4 >Japan</h4>
+            <p>The Asosan volcano located on the island of Kyushu in Japan has shown
+            some recent activity. For now no civilians are in danger. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--Footer-->
+    <div class="container-fluid top text-center" id="footer">
+      <div class="row">
+        <div class="col-md-4">
+            <img src="./images/logo-wather.png" id="footer-image">
+            <hr class="light"/>
+            <p>555-555-5555</p>
+            <p>email@myemail.com</p>
+            <p>10 Ushev St.</p>
+            <p>Sofia, Bulgariq Pari</p>
+        </div>
+        <div class="col-md-4">
+            <hr class="light"/>
+            <h3>Sources</h3>
+            <hr class="light"/>
+            <p>Bai Asen stations</p>
+            <p>BMG-Info</p>
+            <p>Trese-Seismic</p>
+        </div>
+        <div class="col-md-4">
+          <hr class="light"/>
+          <h3>Donations</h3>
+          <hr class="light"/>
+          <p>Consider donating to support our cause</p>
+          <button type="button" class="btn btn-secondary top">Donate Now</button>
+        </div>
+        <div class="col-md-12">
+          <hr/>
+          <p>&copy;Weather or Not GmbH</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
